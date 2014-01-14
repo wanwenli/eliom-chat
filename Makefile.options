@@ -8,7 +8,7 @@ PROJECT_NAME := chat
 # Source files for the server
 SERVER_FILES := $(wildcard *.eliomi *.eliom common.ml server.ml service.ml)
 # Source files for the client
-CLIENT_FILES := $(wildcard *.eliomi *.eliom common.ml client.ml)
+CLIENT_FILES := $(wildcard *.eliomi *.eliom common.ml)
 
 # OCamlfind packages for the server
 SERVER_PACKAGES :=
