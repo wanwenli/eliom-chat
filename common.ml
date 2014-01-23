@@ -1,3 +1,3 @@
-type message = (string) deriving (Json)
+type message = (string * string) deriving (Json)
 
 let textarea_cols = 60

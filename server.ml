@@ -19,14 +19,12 @@ let bus = Eliom_bus.create Json.t<message>
 let login_form () =
     post_form ~service:connection_service
     (fun (username) ->
-        [fieldset
-            [
-            label ~a:[a_for username] [pcdata "Username"];
-            string_input ~input_type:`Text ~name:username ();
-            br ();
-            string_input ~input_type:`Submit ~value:"Login" ();
-            string_input ~input_type:`Reset ~value:"Cancel" ();
-            ]
+        [
+        label ~a:[a_for username] [pcdata "Username"];
+        string_input ~input_type:`Text ~name:username ();
+        br ();
+        string_input ~input_type:`Submit ~value:"Login" ();
+        string_input ~input_type:`Reset ~value:"Cancel" ();
         ]
     ) ()
 
@@ -61,7 +59,7 @@ let chat_page username =
         )
         (body[
             h1 [pcdata "Eliom Chat"];
-            h3 [pcdata ("You are logged in as "^username)];
+            h3 [pcdata ("You have logged in as "^username)];
             msg_box;
             p [btn_send];
             msg_display
