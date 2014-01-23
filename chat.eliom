@@ -15,7 +15,7 @@ let () =
     ~service:connection_service
     (fun () name ->
         ignore{unit{
-            (* the code below cannot be put into client section *)
+            (* FIXME the code below cannot be put into client section *)
             let btn_send_elt = To_dom.of_button %btn_send in
             let msg_box_elt = To_dom.of_textarea %msg_box in
             let msg_display_elt = To_dom.of_div %msg_display in
